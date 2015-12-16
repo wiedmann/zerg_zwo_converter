@@ -175,7 +175,7 @@ class ErgParser :
         if not self.endOfSection( line ) :
             #print '%s' % line
             try :
-                mins, percent = map( float, line.split() )
+                mins, percent = map( float, line.split()[0:2] )
                 self.data.append( ( mins, percent ) )
             except :
                 pass
