@@ -96,7 +96,7 @@ class ErgParser :
     def duration( self, mins ) :
         # Hard-coded for input interval times in minutes (ERG/MRC)
         # Zwift uses seconds (single in file, 5 sec rounding in GUI)
-        return 60 * mins
+        return round(60 * mins, 0)
 
     def addInterval( self, intervalType, mins, powerLow, powerHigh ) :
         # NB. duration is minutes in ERG/MRC for data, and seconds for Zwift
